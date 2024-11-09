@@ -1,1 +1,68 @@
+def average(marks):
+    total = 0
+    count = 0
+    for mark in marks:
+        if mark != -999:  # -999 indicates absence
+            total += mark
+            count += 1
+    avg = total / count if count != 0 else 0
+    print(f"Total Marks: {total}")
+    print(f"Average Marks: {avg:.2f}")
 
+def maximum(marks):
+    valid_marks = [mark for mark in marks if mark != -999]
+    if valid_marks:
+        return max(valid_marks)
+    return None
+
+def minimum(marks):
+    valid_marks = [mark for mark in marks if mark != -999]
+    if valid_marks:
+        return min(valid_marks)
+    return None
+
+def absent_count(marks):
+    return marks.count(-999)
+
+def max_frequency(marks):
+    frequency = {}
+    for mark in marks:
+        if mark != -999:
+            if mark in frequency:
+                frequency[mark] += 1
+            else:
+                frequency[mark] = 1
+    if frequency:
+        max_mark = max(frequency, key=frequency.get)
+        return max_mark, frequency[max_mark]
+    return None, 0
+
+marks = []
+n = int(input("Enter total number of students: "))
+for i in range(n):
+    mark = int(input(f"Enter marks of student {i+1}: "))
+    marks.append(mark)
+
+while True:
+    print("\n1. Average Marks of the Class")
+    print("2. Highest and Lowest Marks in the Class")
+    print("3. Count of Students Absent for the Test")
+    print("4. Marks with Highest Frequency")
+    print("5. Exit")
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        average(marks)
+    elif choice == 2:
+        print(f"Highest Score: {maximum(marks)}")
+        print(f"Lowest Score: {minimum(marks)}")
+    elif choice == 3:
+        print(f"Number of Students Absent: {absent_count(marks)}")
+    elif choice == 4:
+        mark, freq = max_frequency(marks)
+        print(f"Highest Frequency Mark: {mark} (Frequency: {freq})")
+    elif choice == 5:
+        print("Thanks for using this program!")
+        break
+    else:
+        print("Invalid choice, please try again.")
