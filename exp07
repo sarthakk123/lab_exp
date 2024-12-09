@@ -5,15 +5,13 @@ def input_percentage():
         perc.append(float(input("Enter the percentage of Student {0} : ".format(i+1))))
     return perc
 
-#<--------------------------------------------------------------------------------------------------------------------->
 
-# Function for printing the percentage of the Students
 
 def print_percentage(perc):
     for i in range(len(perc)):
         print(perc[i],sep = "\n")
 
-#<--------------------------------------------------------------------------------------------------------------------->
+
 
 # Function for performing partition of the Data
 
@@ -40,9 +38,7 @@ def percentage_partition(perc,start,end):
 
     return upper_bound
 
-#<--------------------------------------------------------------------------------------------------------------------->
 
-# Function for performing Quick Sort on the Data
 
 def Quick_Sort(perc,start,end):
     while start < end:
@@ -51,9 +47,8 @@ def Quick_Sort(perc,start,end):
         Quick_Sort(perc,partition+1,end)
         return perc
 
-#<--------------------------------------------------------------------------------------------------------------------->
 
-# Function for Displaying Top Five Percentages of Students
+
 
 def display_top_five(perc):
     print("Top Five Percentages are : ")
@@ -64,11 +59,6 @@ def display_top_five(perc):
 
     for i in range(start, stop, -1):
         print(perc[i],sep = "\n")
-
-
-#<--------------------------------------------------------------------------------------------------------------------->
-
-# Main
 
 unsorted_percentage = []
 sorted_percentage = []
