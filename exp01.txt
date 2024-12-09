@@ -2,7 +2,7 @@ def average(marks):
     total = 0
     count = 0
     for mark in marks:
-        if mark != -999:  # -999 indicates absence
+        if mark != -999: 
             total += mark
             count += 1
     avg = total / count if count != 0 else 0
