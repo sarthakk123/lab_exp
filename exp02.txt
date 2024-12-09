@@ -19,14 +19,14 @@ def In(element, list1):
 	                return i
 	    return 0
 	
-	# Function to reverse the given string---------------------------------->>
+	
 	def revstr(string):
 	    revstr=""
 	    for i in range(len(string)):
 	        revstr=string[i]+revstr
 	    return revstr
 	
-	# Function to count the length of given string-------------------------->>
+	
 	def str_count(str1, char):
 	   count=0
 	   for i in range(len(str1)):
@@ -34,7 +34,7 @@ def In(element, list1):
 	           count+=1
 	   return count
 	
-	# Function to find word with longest length----------------------------------->>
+	
 	def max_len(splitL):
 	    global new_str2
 	    len1=0
@@ -45,7 +45,7 @@ def In(element, list1):
 	           new_str2=new_str1+splitL[i]
 	    return len1
 	
-	# Function to check given string is palindrome or not without reversing string-->>
+	
 	def is_palindrome(str):
 	
 	    for i in range(0, int(len(str)/2)):
@@ -63,7 +63,6 @@ def In(element, list1):
 	else:
 	    print("Entered string is not palindrome")
 	
-	# Palindrome checking using reverse string method----------------->>
 	if revstr(str1)==str1:
 	    print("Entered string is palindrome(using reverse string method)")
 	else:
