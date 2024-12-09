@@ -14,7 +14,6 @@ def Selection_Sort(marks):
     for i in range(len(marks)):
         print(marks[i])
 
-#<--------------------------------------------------------------------------------------->
 
 # Function for Bubble Sort of elements
 
@@ -34,7 +33,7 @@ def Bubble_Sort(marks):
     for i in range(len(marks)):
         print(marks[i])
 
-#<--------------------------------------------------------------------------------------->
+
 
 # Function for displaying top five marks
 
@@ -42,9 +41,6 @@ def top_five_marks(marks):
     print("Top",len(marks),"Marks are : ")
     print(*marks[::-1], sep="\n")
 
-#<---------------------------------------------------------------------------------------->
-
-# Main
 
 marks=[]
 n = int(input("Enter number of students whose marks are to be displayed : "))
@@ -59,7 +55,7 @@ print(marks)
 
 flag=1;
 while flag==1:
-    print("\n---------------MENU---------------")
+    print("\nMENU")
     print("1. Selection Sort of the marks")
     print("2. Bubble Sort of the marks")
     print("3. Exit")
