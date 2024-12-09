@@ -5,7 +5,7 @@ def average(marks):
         if mark != -999: 
             total += mark
             count += 1
-    avg = total / count if count != 0 else 0
+    avg = total / count
     print(f"Total Marks: {total}")
     print(f"Average Marks: {avg:.2f}")
 
